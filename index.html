@@ -65,24 +65,49 @@
       border-radius: 5px;
       transition: color 0.3s ease, background 0.3s ease;
     }
+    nav {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+nav a {
+  color: #0078D4;
+  text-decoration: underline;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Bienvenue dans la démo **NON Accessible** ❌</h1>
+    <h1>Bienvenue dans la démo **NON Accessible** 🎉</h1>
     
     <nav class="menu">
       <button onclick="showMessage('Accueil')">Accueil</button>
       <button onclick="showMessage('À propos')">À propos</button>
       <button onclick="showMessage('Contact')">Contact</button>
     </nav>
-    
+  </nav>
+</nav>  
+
+
     <p id="message" class="content"></p>
     
     <img src="fauteuil_access.gif" alt=""> <!-- Suppression du texte alternatif -->
     
     <p class="random-text" id="randomText">Clique-moi pour changer de couleur !</p>
+
+    <nav>
+      <a href="test_comparatif_access.html">Version accessible</a>
+    </nav>
+    
   </div>
+
 
   <script>
     function changeColor() {
@@ -100,8 +125,7 @@
     textElement.addEventListener("click", changeColor);
     // Suppression du support clavier
   </script>
-  
-<p>Voir la version accessible : <a href="test_comparatif_access.html">Cliquez ici</a></p>
+
   
 </body>
 </html>
