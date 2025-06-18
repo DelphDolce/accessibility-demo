@@ -68,6 +68,23 @@
     .random-text:focus {
       outline: 5px solid #ffae00; /* Focus bien visible */
     }
+
+    nav {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+nav a {
+  color: #0078D4;
+  text-decoration: underline;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
   </style>
 </head>
 <body>
@@ -85,6 +102,13 @@
     <img src="./fauteuil_access.gif" alt="Affiche promouvant l'accessibilité pour tous, tenue par deux mains">
     
     <p class="random-text" id="randomText">Clique-moi pour changer de couleur !</p>
+
+      
+    <nav>
+      <a href="index.html">Version classique</a>
+    </nav>
+    
+
   </div>
 
   <script>
@@ -114,8 +138,7 @@
       }
     });
   </script>
-  
-  <p>Voir la version originale : <a href="index.html">Retour</a></p>
+
 
   
 </body>
