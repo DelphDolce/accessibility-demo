@@ -97,6 +97,33 @@ nav a:hover {
     min-height: 44px;
   }
 }
+    .menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu li {
+  margin: 0;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #005fcc;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5em;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+  background: #ff3b3b;
+  transform: scale(1.1);
+}
+
 
   </style>
 </head>
@@ -104,7 +131,7 @@ nav a:hover {
   <div class="container">
     <h1>Bienvenue dans la démo **FUN ET ACCESSIBLE** 🎉</h1>
     
-    <nav aria-label="Menu principal">
+    <nav class="menu" aria-label="Menu principal">
   <ul>
     <li><a href="index.html">Version non accessible</a></li>
     <li><a href="accessible.html" aria-current="page">Version accessible</a></li>
