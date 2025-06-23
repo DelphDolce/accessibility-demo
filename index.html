@@ -80,6 +80,20 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+    .lien-nav {
+  display: inline-block;
+  padding: 12px; /* ou plus, selon le design */
+  text-decoration: none;
+  color: #000;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .lien-nav {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
 
   </style>
 </head>
@@ -101,11 +115,10 @@ nav a:hover {
     <img src="fauteuil_access.gif" alt=""> <!-- Suppression du texte alternatif -->
     
     <p class="random-text" id="randomText">Clique-moi pour changer de couleur !</p>
-  </br>
 
-    <button style="min-width: 44px; min-height: 44px;">
-    Version Accessible
-</button>
+ <nav>
+  <a href="/accueil" class="lien-nav">Accueil</a>
+</nav>
     
   </div>
 
