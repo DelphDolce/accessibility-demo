@@ -84,6 +84,19 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+.lien-nav {
+  display: inline-block;
+  padding: 12px; /* ou plus, selon le design */
+  text-decoration: none;
+  color: #000;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .lien-nav {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
 
   </style>
 </head>
@@ -105,7 +118,7 @@ nav a:hover {
 
       
     <nav>
-      <a href="index.html">Version classique</a>
+      <a href="index.html" class="lien-nav">Version classique</a>
     </nav>
     
 
