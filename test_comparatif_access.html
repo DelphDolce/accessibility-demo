@@ -97,32 +97,32 @@ nav a:hover {
     min-height: 44px;
   }
 }
-    .menu ul {
-  list-style: none;
-  padding: 0;
+    .menu {
   display: flex;
-  gap: 1rem;
-}
-
-.menu li {
-  margin: 0;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
 }
 
 .menu a {
-  display: inline-block;
-  padding: 0.5em 1em;
-  background-color: #005fcc;
+  font-size: 1.2rem;
+  padding: 0.7rem 1.5rem;
+  background: #ff6f61;
   color: white;
+  border: none;
+  border-radius: 50px;
   text-decoration: none;
-  border-radius: 0.5em;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .menu a:hover,
 .menu a:focus-visible {
   background: #ff3b3b;
   transform: scale(1.1);
+  outline: none; /* tu peux garder ou supprimer */
 }
+
 
 
   </style>
@@ -131,13 +131,11 @@ nav a:hover {
   <div class="container">
     <h1>Bienvenue dans la démo **FUN ET ACCESSIBLE** 🎉</h1>
     
-    <nav class="menu" aria-label="Menu principal">
-  <ul>
-    <li><a href="index.html">Version non accessible</a></li>
-    <li><a href="accessible.html" aria-current="page">Version accessible</a></li>
-  </ul>
+   <nav class="menu" aria-label="Menu principal">
+  <a href="#accueil">Accueil</a>
+  <a href="#apropos">À propos</a>
+  <a href="#contact">Contact</a>
 </nav>
-
     
     <p id="message" class="content"></p>
     
