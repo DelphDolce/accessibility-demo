@@ -22,21 +22,21 @@
       background: rgba(255, 255, 255, 0.7);
       border-radius: 10px;
     }
-    button {
+    .tiny-link {
       font-size: 0.6rem;
       padding: 0.2rem 0.4rem;
-      border: none;
       background: #ff6f61;
       color: white;
-      cursor: pointer;
       border-radius: 50px;
+      text-decoration: none;
+      display: inline-block;
       transition: all 0.3s ease;
     }
-    button:hover {
+    .tiny-link:hover {
       background: #ff3b3b;
       transform: scale(1.1);
     }
-    button:focus {
+    .tiny-link:focus {
       outline: none;
     }
     nav {
@@ -53,8 +53,8 @@
 <body>
   <div class="container">
     <h1>Démo Tremblement 🤯</h1>
-    <p>Essayez de cliquer sur ce petit bouton avec votre souris qui tremble (via Funkify ou le curseur tremblant) :</p>
-    <button onclick="alert('Bravo, vous avez réussi à cliquer !')">Cliquer ici</button>
+    <p>Essayez de cliquer sur ce petit lien avec votre souris qui tremble :</p>
+    <a href="#" onclick="alert('Bravo, vous avez réussi à cliquer !')" class="tiny-link">Cliquer ici</a>
 
     <nav>
       <a href="index.html">Retour accueil</a>
@@ -69,13 +69,13 @@
     trembleCursor.style.height = '12px';
     trembleCursor.style.background = '#ff3b3b';
     trembleCursor.style.borderRadius = '50%';
-    trembleCursor.style.pointerEvents = 'none'; // Ne gêne pas les clics
+    trembleCursor.style.pointerEvents = 'none';
     trembleCursor.style.zIndex = '9999';
     trembleCursor.style.transition = 'transform 0.05s ease-out';
     document.body.appendChild(trembleCursor);
 
     window.addEventListener('mousemove', e => {
-      const shakeRange = 20; // pixels max du tremblement
+      const shakeRange = 10; // plus haut = tremblement plus intense
       const offsetX = (Math.random() * shakeRange * 2) - shakeRange;
       const offsetY = (Math.random() * shakeRange * 2) - shakeRange;
 
