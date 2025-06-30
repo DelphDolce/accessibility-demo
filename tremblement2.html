@@ -6,22 +6,31 @@
   <title>Démo Tremblement - Non Accessible</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Playfair Display', serif;
-      margin: 0;
-      padding: 2rem;
       background: linear-gradient(to right, #ffa69e, #5fa8d3);
       color: #aaa;
       text-align: center;
       cursor: none; /* Cache le curseur natif */
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+
     .container {
       max-width: 600px;
-      margin: 0 auto;
       padding: 2rem;
       background: rgba(255, 255, 255, 0.7);
       border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+
     .tiny-link {
       font-size: 0.6rem;
       padding: 0.2rem 0.4rem;
@@ -32,16 +41,20 @@
       display: inline-block;
       transition: all 0.3s ease;
     }
+
     .tiny-link:hover {
       background: #ff3b3b;
       transform: scale(1.1);
     }
+
     .tiny-link:focus {
       outline: none;
     }
+
     nav {
       margin-top: 20px;
     }
+
     nav a {
       color: #0078D4;
       text-decoration: none;
