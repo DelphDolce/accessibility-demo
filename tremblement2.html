@@ -75,7 +75,7 @@
     document.body.appendChild(trembleCursor);
 
     window.addEventListener('mousemove', e => {
-      const shakeRange = 8; // pixels max du tremblement
+      const shakeRange = 12; // pixels max du tremblement
       const offsetX = (Math.random() * shakeRange * 2) - shakeRange;
       const offsetY = (Math.random() * shakeRange * 2) - shakeRange;
 
