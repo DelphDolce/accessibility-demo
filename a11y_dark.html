@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>À propos de l'accessibilité</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-color: #121212;
+      --container-bg: #1e1e1e;
+      --text-color: #ffffff;
+      --link-color: #4ea8de;
+      --focus-color: #ffffff;
+      --box-shadow: rgba(255, 255, 255, 0.1);
+    }
+
+    body {
+      font-family: 'Work Sans', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: var(--bg-color);
+      color: var(--text-color);
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: var(--container-bg);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px var(--box-shadow);
+      text-align: left;
+      line-height: 1.7;
+    }
+
+    h1, h2 {
+      color: var(--text-color);
+    }
+
+    ul {
+      list-style-type: "☐ ";
+      padding-left: 1.2em;
+    }
+
+    code {
+      background-color: #333;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-size: 0.95em;
+      font-family: monospace;
+      color: #f0f0f0;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: underline;
+    }
+
+    .external-link {
+      position: relative;
+      padding-right: 1.2em;
+    }
+
+    .external-link .icon {
+      font-size: 0.85em;
+      margin-left: 0.2em;
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #444;
+      font-size: 0.95rem;
+    }
+
+    a:focus,
+    button:focus {
+      outline: 2px solid var(--focus-color);
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>À propos de l'accessibilité</h1>
+    <p>
+      Cette page propose une boîte à outils pour améliorer l’accessibilité numérique de vos interfaces.  
+      Elle s’appuie sur les recommandations du RGAA, des WCAG, et mon expérience en conseil et audit.
+    </p>
+
+    <h2>🌍 Les 4 principes fondamentaux</h2>
+    <ul>
+      <li><strong>Perceptible</strong> : le contenu doit être visible, lisible, audible (ex : contrastes, alternatives aux images)</li>
+      <li><strong>Utilisable</strong> : tout doit être accessible au clavier, avec un focus visible</li>
+      <li><strong>Compréhensible</strong> : langage clair, aide à la saisie, navigation logique</li>
+      <li><strong>Robuste</strong> : compatible avec les technologies d’assistance (lecteurs d’écran, etc.)</li>
+    </ul>
+
+    <h2>✅ Checklist de vérification rapide</h2>
+    <ul>
+      <li>Tous les éléments interactifs sont accessibles au clavier</li>
+      <li>Le contraste texte/fond respecte un ratio de 4.5:1 minimum</li>
+      <li>Chaque image décorative a <code>alt=""</code></li>
+      <li>Le focus clavier est visible sur tous les éléments focusables</li>
+      <li>Les titres HTML sont hiérarchisés correctement (h1, h2…)</li>
+      <li>Le langage de la page est défini (<code>&lt;html lang="fr"&gt;</code>)</li>
+      <li>Aucun lien n’a pour intitulé “cliquez ici”</li>
+    </ul>
+
+    <h2>🛠 Outils utiles</h2>
+    <ul>
+      <li>
+        <a href="https://wave.webaim.org/" target="_blank" rel="noopener noreferrer" class="external-link">
+          Wave<span class="sr-only">(s’ouvre dans un nouvel onglet)</span><span class="icon" aria-hidden="true">↗</span>
+        </a> – extension pour repérer les erreurs visuelles
+      </li>
+      <li>DevTools → <strong>Lighthouse</strong> → Accessibilité</li>
+      <li>
+        <a href="https://www.deque.com/axe/devtools/" target="_blank" rel="noopener noreferrer" class="external-link">
+          axe DevTools<span class="sr-only">(s’ouvre dans un nouvel onglet)</span><span class="icon" aria-hidden="true">↗</span>
+        </a> – très complet
+      </li>
+      <li>Test vocal : <strong>NVDA</strong>, <strong>VoiceOver</strong> (Mac)</li>
+      <li>
+        <a href="https://asq-extended.orange.com/" target="_blank" rel="noopener noreferrer" class="external-link">
+          Asq-Extended (Orange)<span class="sr-only">(s’ouvre dans un nouvel onglet)</span><span class="icon" aria-hidden="true">↗</span>
+        </a> – test RGAA rapide
+      </li>
+    </ul>
+
+    <h2>📚 Ressources utiles</h2>
+    <ul>
+      <li>
+        <a href="https://accessibilite.numerique.gouv.fr/methode/" target="_blank" rel="noopener noreferrer" class="external-link">
+          RGAA 4.1 officiel<span class="sr-only">(s’ouvre dans un nouvel onglet)</span><span class="icon" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener noreferrer" class="external-link">
+          WCAG 2.1 (W3C)<span class="sr-only">(s’ouvre dans un nouvel onglet)</span><span class="icon" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://webaim.org/standards/wcag/checklist" target="_blank" rel="noopener noreferrer" class="external-link">
+          Checklist WebAIM<span class="sr-only">(s’ouvre dans un nouvel onglet)</span><span class="icon" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.temesis.com/" target="_blank" rel="noopener noreferrer" class="external-link">
+          Temesis<span class="sr-only">(s’ouvre dans un nouvel onglet)</span><span class="icon" aria-hidden="true">↗</span>
+        </a> – Blog accessibilité & bonnes pratiques
+      </li>
+    </ul>
+
+    <footer>
+      Page maintenue par <strong>une référente accessibilité numérique</strong> –  
+      N’hésitez pas à <a href="mailto:tonmail@example.com">me contacter</a> pour toute question ou suggestion.
+    </footer>
+  </div>
+</body>
+</html>
