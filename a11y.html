@@ -10,8 +10,8 @@
       font-family: 'Work Sans', sans-serif;
       margin: 0;
       padding: 2rem;
-      background: #f4f4f4; /* fond très clair, lisible */
-      color: #000; /* texte noir pour contraste fort */
+      background: #f4f4f4;
+      color: #000;
       text-align: center;
     }
 
@@ -19,7 +19,7 @@
       max-width: 900px;
       margin: 0 auto;
       padding: 2rem;
-      background: #ffffff; /* fond blanc opaque */
+      background: #ffffff;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       text-align: left;
@@ -48,6 +48,32 @@
       text-decoration: underline;
     }
 
+    .external-link {
+      color: #0078D4;
+      text-decoration: underline;
+      position: relative;
+      padding-right: 1.2em;
+    }
+
+    .external-link .icon {
+      font-size: 0.85em;
+      margin-left: 0.2em;
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
     footer {
       margin-top: 2rem;
       padding-top: 1rem;
@@ -74,30 +100,58 @@
 
     <h2>✅ Checklist de vérification rapide</h2>
     <ul>
-      <li>☐ Tous les éléments interactifs sont accessibles au clavier</li>
-      <li>☐ Le contraste texte/fond respecte un ratio de 4.5:1 minimum</li>
-      <li>☐ Chaque image décorative a <code>alt=""</code></li>
-      <li>☐ Le focus clavier est visible sur tous les éléments focusables</li>
-      <li>☐ Les titres HTML sont hiérarchisés correctement (h1, h2…)</li>
-      <li>☐ Le langage de la page est défini (<code>&lt;html lang="fr"&gt;</code>)</li>
-      <li>☐ Aucun lien n’a pour intitulé “cliquez ici”</li>
+      <li>Tous les éléments interactifs sont accessibles au clavier</li>
+      <li>Le contraste texte/fond respecte un ratio de 4.5:1 minimum</li>
+      <li>Chaque image décorative a <code>alt=""</code></li>
+      <li>Le focus clavier est visible sur tous les éléments focusables</li>
+      <li>Les titres HTML sont hiérarchisés correctement (h1, h2…)</li>
+      <li>Le langage de la page est défini (<code>&lt;html lang="fr"&gt;</code>)</li>
+      <li>Aucun lien n’a pour intitulé “cliquez ici”</li>
     </ul>
 
     <h2>🛠 Outils utiles</h2>
     <ul>
-      <li><a href="https://wave.webaim.org/" target="_blank" rel="noopener noreferrer">Wave</a> – extension pour repérer les erreurs visuelles</li>
+      <li>
+        <a href="https://wave.webaim.org/" target="_blank" rel="noopener noreferrer" class="external-link">
+          Wave<span class="sr-only">(s’ouvre dans un nouvel onglet)</span><span class="icon" aria-hidden="true">↗</span>
+        </a> – extension pour repérer les erreurs visuelles
+      </li>
       <li>DevTools → <strong>Lighthouse</strong> → Accessibilité</li>
-      <li><a href="https://www.deque.com/axe/devtools/" target="_blank" rel="noopener noreferrer">axe DevTools</a> – très complet</li>
+      <li>
+        <a href="https://www.deque.com/axe/devtools/" target="_blank" rel="noopener noreferrer" class="external-link">
+          axe DevTools<span class="sr-only">(s’ouvre dans un nouvel onglet)</span><span class="icon" aria-hidden="true">↗</span>
+        </a> – très complet
+      </li>
       <li>Test vocal : <strong>NVDA</strong>, <strong>VoiceOver</strong> (Mac)</li>
-      <li><a href="https://asq-extended.orange.com/" target="_blank" rel="noopener noreferrer">Asq-Extended (Orange)</a> – test RGAA rapide</li>
+      <li>
+        <a href="https://asq-extended.orange.com/" target="_blank" rel="noopener noreferrer" class="external-link">
+          Asq-Extended (Orange)<span class="sr-only">(s’ouvre dans un nouvel onglet)</span><span class="icon" aria-hidden="true">↗</span>
+        </a> – test RGAA rapide
+      </li>
     </ul>
 
     <h2>📚 Ressources utiles</h2>
     <ul>
-      <li><a href="https://accessibilite.numerique.gouv.fr/methode/" target="_blank" rel="noopener noreferrer">RGAA 4.1 officiel</a></li>
-      <li><a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener noreferrer">WCAG 2.1 (W3C)</a></li>
-      <li><a href="https://webaim.org/standards/wcag/checklist" target="_blank" rel="noopener noreferrer">Checklist WebAIM</a></li>
-      <li><a href="https://www.temesis.com/" target="_blank" rel="noopener noreferrer">Temesis</a> – Blog accessibilité & bonnes pratiques</li>
+      <li>
+        <a href="https://accessibilite.numerique.gouv.fr/methode/" target="_blank" rel="noopener noreferrer" class="external-link">
+          RGAA 4.1 officiel<span class="sr-only">(s’ouvre dans un nouvel onglet)</span><span class="icon" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener noreferrer" class="external-link">
+          WCAG 2.1 (W3C)<span class="sr-only">(s’ouvre dans un nouvel onglet)</span><span class="icon" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://webaim.org/standards/wcag/checklist" target="_blank" rel="noopener noreferrer" class="external-link">
+          Checklist WebAIM<span class="sr-only">(s’ouvre dans un nouvel onglet)</span><span class="icon" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.temesis.com/" target="_blank" rel="noopener noreferrer" class="external-link">
+          Temesis<span class="sr-only">(s’ouvre dans un nouvel onglet)</span><span class="icon" aria-hidden="true">↗</span>
+        </a> – Blog accessibilité & bonnes pratiques
+      </li>
     </ul>
 
     <footer>
