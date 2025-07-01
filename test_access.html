@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beau ET Accessible</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>À propos de l'accessibilité</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -14,172 +14,95 @@
       color: #333;
       text-align: center;
     }
+
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 2rem;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: left;
     }
-    .menu {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-    .menu button {
-      font-size: 1.2rem;
-      padding: 0.7rem 1.5rem;
-      border: none;
-      background: #ff6f61;
-      color: black;
-      cursor: pointer;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-    }
-    .menu button:hover {
-      background: #ff3b3b;
-      transform: scale(1.1);
-    }
-    .menu button:focus {
-      outline: 5px solid #0078D4; /* Contour bleu maintenu */
-    }
-    .content {
-      margin-top: 2rem;
-      font-size: 1.2rem;
-      color: #444;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    .content.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .random-text {
-      font-size: 1.5rem;
+
+    h1, h2 {
       color: #0078D4;
-      transition: color 0.3s ease, background 0.3s ease;
-      padding: 10px;
-      display: inline-block;
-      border-radius: 5px;
-    }
-    .random-text:focus {
-      outline: 5px solid #ffae00; /* Focus bien visible */
     }
 
-    nav {
-  margin-top: 20px;
-  font-size: 1.2rem;
-}
+    ul {
+      list-style-type: "☐ ";
+      padding-left: 1.2em;
+      line-height: 1.7;
+    }
 
-nav a {
-  color: #0078D4;
-  text-decoration: underline;
-  margin: 0 15px;
-  font-weight: bold;
-}
+    code {
+      background-color: #f2f2f2;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
 
-nav a:hover {
-  text-decoration: underline;
-}
-.lien-nav {
-  display: inline-block;
-  padding: 12px; /* ou plus, selon le design */
-  text-decoration: underline;
-  color: #000;
-}
+    a {
+      color: #0078D4;
+      text-decoration: underline;
+    }
 
-@media (hover: underline) and (pointer: coarse) {
-  .lien-nav {
-    min-width: 44px;
-    min-height: 44px;
-  }
-}
-    .menu {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.menu a {
-  font-size: 1.2rem;
-  padding: 0.7rem 1.5rem;
-  background: #ff6f61;
-  color: white;
-  border: none;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.menu a:hover,
-.menu a:focus-visible {
-  background: #ff3b3b;
-  transform: scale(1.1);
-  outline: none; /* tu peux garder ou supprimer */
-}
-
-
-
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ccc;
+      font-size: 0.95rem;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Bienvenue dans la démo **FUN ET ACCESSIBLE** 🎉</h1>
-    
-   <nav class="menu" aria-label="Menu principal">
-  <a href="#accueil">Accueil</a>
-  <a href="#apropos">À propos</a>
-  <a href="#contact">Contact</a>
-</nav>
-    
-    <p id="message" class="content"></p>
-    
-    <img src="./fauteuil_access.gif" alt="Affiche promouvant l'accessibilité pour tous, tenue par deux mains">
-    
-    <p class="random-text" id="randomText">Clique-moi pour changer de couleur !</p>
+    <h1>À propos de l'accessibilité</h1>
+    <p>
+      Cette page propose une boîte à outils pour améliorer l’accessibilité numérique de vos interfaces.  
+      Elle s’appuie sur les recommandations du RGAA, des WCAG, et mon expérience en conseil et audit.
+    </p>
 
-      
-    <nav>
-      <a href="index.html" class="lien-nav">Version classique</a>
-    </nav>
-    
+    <h2>🌍 Les 4 principes fondamentaux</h2>
+    <ul>
+      <li><strong>Perceptible</strong> : le contenu doit être visible, lisible, audible (ex : contrastes, alternatives aux images)</li>
+      <li><strong>Utilisable</strong> : tout doit être accessible au clavier, avec un focus visible</li>
+      <li><strong>Compréhensible</strong> : langage clair, aide à la saisie, navigation logique</li>
+      <li><strong>Robuste</strong> : compatible avec les technologies d’assistance (lecteurs d’écran, etc.)</li>
+    </ul>
 
+    <h2>✅ Checklist de vérification rapide</h2>
+    <ul>
+      <li>☐ Tous les éléments interactifs sont accessibles au clavier</li>
+      <li>☐ Le contraste texte/fond respecte un ratio de 4.5:1 minimum</li>
+      <li>☐ Chaque image décorative a <code>alt=""</code></li>
+      <li>☐ Le focus clavier est visible sur tous les éléments focusables</li>
+      <li>☐ Les titres HTML sont hiérarchisés correctement (h1, h2…)</li>
+      <li>☐ Le langage de la page est défini (<code>&lt;html lang="fr"&gt;</code>)</li>
+      <li>☐ Aucun lien n’a pour intitulé “cliquez ici”</li>
+    </ul>
+
+    <h2>🛠 Outils utiles</h2>
+    <ul>
+      <li><a href="https://wave.webaim.org/" target="_blank">Wave</a> – extension pour repérer les erreurs visuelles</li>
+      <li>DevTools → <strong>Lighthouse</strong> → Accessibilité</li>
+      <li><a href="https://www.deque.com/axe/devtools/" target="_blank">axe DevTools</a> – très complet</li>
+      <li>Test vocal : <strong>NVDA</strong>, <strong>VoiceOver</strong> (Mac)</li>
+      <li><a href="https://asq-extended.orange.com/" target="_blank">Asq-Extended (Orange)</a> – test RGAA rapide</li>
+    </ul>
+
+    <h2>📚 Ressources utiles</h2>
+    <ul>
+      <li><a href="https://accessibilite.numerique.gouv.fr/methode/" target="_blank">RGAA 4.1 officiel</a></li>
+      <li><a href="https://www.w3.org/TR/WCAG21/" target="_blank">WCAG 2.1 (W3C)</a></li>
+      <li><a href="https://webaim.org/standards/wcag/checklist" target="_blank">Checklist WebAIM</a></li>
+      <li><a href="https://www.temesis.com/" target="_blank">Temesis</a> – Blog accessibilité & bonnes pratiques</li>
+    </ul>
+
+    <footer>
+      Page maintenue par <strong>une référente accessibilité numérique</strong> –  
+      N’hésitez pas à <a href="mailto:tonmail@example.com">me contacter</a> pour toute question ou suggestion.
+    </footer>
   </div>
-
-  <script>
-    function changeColor() {
-      let colors = ["#ff3b3b", "#0078D4", "#ffae00", "#7f00ff"];
-      let textElement = document.getElementById("randomText");
-      let newColor = colors[Math.floor(Math.random() * colors.length)];
-
-      textElement.style.color = newColor;
-
-      // Définir le fond en fonction de la couleur choisie
-      if (["#ffae00", "#7f00ff"].includes(newColor)) {
-        textElement.style.background = "black"; // Fond noir pour couleurs claires
-      } else {
-        textElement.style.background = "white"; // Fond blanc pour couleurs foncées
-      }
-    }
-
-    let textElement = document.getElementById("randomText");
-    textElement.setAttribute("tabindex", "0");
-
-    textElement.addEventListener("click", changeColor);
-    textElement.addEventListener("keydown", function(event) {
-      if (event.key === "Enter" || event.key === " ") { 
-        event.preventDefault();
-        changeColor();
-      }
-    });
-  </script>
-
-
-  
 </body>
 </html>
