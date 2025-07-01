@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>À propos de l'accessibilité</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding: 2rem;
+      background: linear-gradient(to right, #ffa69e, #5fa8d3);
+      color: #333;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    h1, h2, h3 {
+      color: #0078D4;
+    }
+    ul {
+      text-align: left;
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 0.5rem 0;
+      padding-left: 1.2em;
+      text-indent: -1.2em;
+    }
+    code {
+      background: #eee;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    a {
+      color: #0078D4;
+      text-decoration: underline;
+    }
+    .back-link {
+      margin-top: 2rem;
+      display: inline-block;
+      padding: 0.7rem 1.2rem;
+      background: #ff6f61;
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .back-link:hover,
+    .back-link:focus-visible {
+      background: #ff3b3b;
+      transform: scale(1.05);
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>À propos de l'accessibilité</h1>
+
+    <p>
+      Ce projet a été conçu avec une attention particulière portée à l’accessibilité numérique.
+      En tant que référente en accessibilité numérique (audit, conseil), je partage ici une boîte à outils 
+      et des repères clés pour concevoir des interfaces plus inclusives.
+    </p>
+
+    <h2>🌍 Les 4 principes fondamentaux</h2>
+    <ul>
+      <li><strong>Perceptible :</strong> contenu visible ou perceptible par tous (ex. contrastes, alternative textuelle).</li>
+      <li><strong>Utilisable :</strong> navigation au clavier possible, focus visible, pas de pièges.</li>
+      <li><strong>Compréhensible :</strong> langage clair, formulaire explicite, messages d’erreur utiles.</li>
+      <li><strong>Robuste :</strong> compatible avec les technologies d’assistance (lecteurs d’écran, etc.).</li>
+    </ul>
+
+    <h2>🧰 Checklist rapide</h2>
+    <ul>
+      <li>☐ Navigation clavier complète (Tab / Maj+Tab / Entrée)</li>
+      <li>☐ Contraste suffisant (≥ 4.5:1 pour le texte)</li>
+      <li>☐ Images décoratives avec <code>alt=""</code></li>
+      <li>☐ Focus clavier visible (pas juste un effet visuel discret)</li>
+      <li>☐ Titres hiérarchiques bien structurés (h1, h2, h3…)</li>
+      <li>☐ Attribut <code>lang="fr"</code> sur la balise <code>&lt;html&gt;</code></li>
+      <li>☐ Liens explicites (éviter "cliquez ici")</li>
+    </ul>
+
+    <h2>🛠️ Outils recommandés</h2>
+    <ul>
+      <li><a href="https://wave.webaim.org/" target="_blank">Wave (WebAIM)</a> – extension d’analyse visuelle</li>
+      <li>Lighthouse (dans Chrome DevTools)</li>
+      <li><a href="https://www.deque.com/axe/devtools/" target="_blank">axe DevTools</a> – outil puissant en audit</li>
+      <li>Lecteurs d’écran : NVDA (Windows) ou VoiceOver (macOS)</li>
+      <li><a href="https://asq-extended.orange.com/" target="_blank">ASQ-extended (Orange)</a> – validateur RGAA</li>
+    </ul>
+
+    <h2>📚 Références & ressources</h2>
+    <ul>
+      <li><a href="https://accessibilite.numerique.gouv.fr/methode/" target="_blank">RGAA 4.1 – Référentiel officiel</a></li>
+      <li><a href="https://www.w3.org/TR/WCAG21/" target="_blank">WCAG 2.1 (W3C)</a></li>
+      <li><a href="https://webaim.org/standards/wcag/checklist" target="_blank">Checklist WebAIM</a></li>
+      <li><a href="https://www.temesis.com/" target="_blank">Temesis – Accessibilité et qualité web</a></li>
+    </ul>
+
+    <h2>👩‍💻 À propos</h2>
+    <p>
+      Cette page est maintenue par une <strong>Référente Accessibilité Numérique</strong> (audit, conseil).  
+      N'hésitez pas à <a href="mailto:ton.email@example.com">me contacter</a> ou à ouvrir une issue si vous avez des remarques.
+    </p>
+
+    <a href="index.html" class="back-link">← Retour à la démo</a>
+  </div>
+</body>
+</html>
 
