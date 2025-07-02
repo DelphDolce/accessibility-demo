@@ -1,43 +1,88 @@
-<table>
-  <caption>Correspondance des critères WCAG 2.1 – Principe "Perceptible"</caption>
-  <thead>
-    <tr>
-      <th scope="col">Critère WCAG 2.1</th>
-      <th scope="col">Critère RGAA 4.1</th>
-      <th scope="col">Critère ARA</th>
-      <th scope="col">Principe PUCR</th>
-      <th scope="col">Métiers concernés</th>
-      <th scope="col">Couverture</th>
-      <th scope="col">Explication</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1.1.1 Contenu non textuel (A)</td>
-      <td>Critères 1.1 à 1.9</td>
-      <td>Bloc 1 – Images</td>
-      <td>Perceptible</td>
-      <td>Designer, Développeur</td>
-      <td>✔︎ Couvert</td>
-      <td>Tout contenu non textuel (images, icônes, boutons...) doit avoir une alternative textuelle équivalente (ex. : attribut alt).</td>
-    </tr>
-    <tr>
-      <td>1.4.3 Contraste (minimum) (AA)</td>
-      <td>Critère 3.2</td>
-      <td>Bloc 3 – Couleurs</td>
-      <td>Perceptible</td>
-      <td>Designer</td>
-      <td>✔︎ Couvert</td>
-      <td>Le contraste entre le texte et l’arrière-plan doit être d’au moins 4.5:1 pour garantir une bonne lisibilité.</td>
-    </tr>
-    <tr>
-      <td>1.4.12 Espacement du texte (AA)</td>
-      <td>Aucun</td>
-      <td>Aucun</td>
-      <td>Perceptible</td>
-      <td>Designer, Développeur</td>
-      <td>❌ Non couvert – à recommander</td>
-      <td>Le contenu doit rester lisible et fonctionnel même si l’utilisateur augmente l’espacement du texte (line-height, word-spacing, etc.).</td>
-    </tr>
-  </tbody>
-</table>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Correspondance WCAG / RGAA / ARA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background: white;
+    }
+    caption {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background-color: #eeeeee;
+    }
+    tr:nth-child(even) td {
+      background-color: #f6f6f6;
+    }
+    td:last-child {
+      font-size: 0.95em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <caption>Correspondance des critères WCAG 2.1 – Principe "Perceptible"</caption>
+    <thead>
+      <tr>
+        <th scope="col">Critère WCAG 2.1</th>
+        <th scope="col">Critère RGAA 4.1</th>
+        <th scope="col">Critère ARA</th>
+        <th scope="col">Principe PUCR</th>
+        <th scope="col">Métiers concernés</th>
+        <th scope="col">Couverture</th>
+        <th scope="col">Explication</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.1.1 Contenu non textuel (A)</td>
+        <td>Critères 1.1 à 1.9</td>
+        <td>Bloc 1 – Images</td>
+        <td>Perceptible</td>
+        <td>Designer, Développeur</td>
+        <td>✔︎ Couvert</td>
+        <td>Tout contenu non textuel (images, icônes, boutons...) doit avoir une alternative textuelle équivalente (ex. : attribut alt).</td>
+      </tr>
+      <tr>
+        <td>1.4.3 Contraste (minimum) (AA)</td>
+        <td>Critère 3.2</td>
+        <td>Bloc 3 – Couleurs</td>
+        <td>Perceptible</td>
+        <td>Designer</td>
+        <td>✔︎ Couvert</td>
+        <td>Le contraste entre le texte et l’arrière-plan doit être d’au moins 4.5:1 pour garantir une bonne lisibilité.</td>
+      </tr>
+      <tr>
+        <td>1.4.12 Espacement du texte (AA)</td>
+        <td>Aucun</td>
+        <td>Aucun</td>
+        <td>Perceptible</td>
+        <td>Designer, Développeur</td>
+        <td>❌ Non couvert – à recommander</td>
+        <td>Le contenu doit rester lisible et fonctionnel même si l’utilisateur augmente l’espacement du texte (line-height, word-spacing, etc.).</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
