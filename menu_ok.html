@@ -142,16 +142,20 @@
   <div class="container">
     <h1>Bienvenue dans la démo <strong>FUN ET ACCESSIBLE</strong> 🎉</h1>
 
-    <nav class="menu" aria-label="Menu principal">
-      <a href="#accueil">Accueil</a>
-      <a href="#apropos">À propos</a>
-      <button aria-haspopup="true" aria-expanded="false" aria-controls="main-menu" onclick="toggleMenu()">Menu</button>
-  <ul id="main-menu" role="menu" hidden>
-    <li role="menuitem"><a href="#">Accueil</a></li>
-    <li role="menuitem"><a href="#">Services</a></li>
-    <li role="menuitem"><a href="#">Contact</a></li>
-  </ul>
-    </nav>
+ <nav class="menu" aria-label="Menu principal">
+  <a href="#accueil">Accueil</a>
+  <a href="#apropos">À propos</a>
+
+  <div class="dropdown">
+    <button aria-haspopup="true" aria-expanded="false" aria-controls="main-menu" onclick="toggleMenu()">Menu</button>
+    <ul id="main-menu" role="menu" hidden>
+      <li role="menuitem"><a href="#">Accueil</a></li>
+      <li role="menuitem"><a href="#">Services</a></li>
+      <li role="menuitem"><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
 
 <script>
 function toggleMenu() {
