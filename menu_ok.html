@@ -1,0 +1,17 @@
+<nav>
+  <button aria-haspopup="true" aria-expanded="false" aria-controls="main-menu" onclick="toggleMenu()">Menu</button>
+  <ul id="main-menu" role="menu" hidden>
+    <li role="menuitem"><a href="#">Accueil</a></li>
+    <li role="menuitem"><a href="#">Services</a></li>
+    <li role="menuitem"><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('main-menu');
+  const isOpen = !menu.hasAttribute('hidden');
+  menu.hidden = isOpen;
+  document.querySelector('button').setAttribute('aria-expanded', !isOpen);
+}
+</script>
