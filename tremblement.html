@@ -59,5 +59,24 @@
       <a href="index.html">Retour accueil</a>
     </nav>
   </div>
+  <nav>
+  <button>Menu pas au clavier</button>
+  <div class="dropdown">
+    <p>Accueil</p>
+    <p>Services</p>
+    <p>Contact</p>
+  </div>
+</nav>
+
+<style>
+.dropdown {
+  display: none;
+}
+
+button:hover + .dropdown {
+  display: block;
+}
+</style>
+
 </body>
 </html>
