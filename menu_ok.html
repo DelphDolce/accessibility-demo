@@ -129,6 +129,19 @@
       text-decoration: underline;
       color: #000;
     }
+#main-menu {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+  padding-left: 0;
+  list-style: none;
+}
+
+#main-menu.show {
+  max-height: 300px; /* assez pour contenu */
+  opacity: 1;
+}
 
     @media (hover: underline) and (pointer: coarse) {
       .lien-nav {
@@ -202,6 +215,15 @@ function toggleMenu() {
         changeColor();
       }
     });
+    function toggleMenu() {
+  const menu = document.getElementById('main-menu');
+  const button = document.querySelector('button');
+  const isOpen = menu.classList.contains('show');
+
+  menu.classList.toggle('show');
+  button.setAttribute('aria-expanded', String(!isOpen));
+}
+
   </script>
 </body>
 </html>
