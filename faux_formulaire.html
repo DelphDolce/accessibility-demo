@@ -1,22 +1,24 @@
-<section aria-labelledby="formTitle">
-  <h2 id="formTitle">📝 Faux formulaire de contact</h2>
+<section>
+  <h2>Contact</h2>
 
   <form>
     <div>
-      <label for="name">Nom :</label>
-      <input type="text" id="name" name="name" />
+      <span>Nom :</span> <!-- ❌ Pas de label, juste du texte -->
+      <input type="text" /> <!-- ❌ Pas de id, pas de name -->
     </div>
 
     <div>
-      <label for="email">Email :</label>
-      <input type="email" id="email" name="email" />
+      <span>Email :</span>
+      <input type="text" /> <!-- ❌ Mauvais type -->
     </div>
 
     <div>
-      <label for="message">Message :</label>
-      <textarea id="message" name="message"></textarea>
+      <span>Message :</span>
+      <div contenteditable="true" class="faux-textarea"></div> <!-- ❌ Faux champ -->
     </div>
 
-    <button type="submit">Envoyer</button>
+    <div class="submit-btn">Envoyer</div> <!-- ❌ Faux bouton -->
   </form>
+</section>
+
 </section>
