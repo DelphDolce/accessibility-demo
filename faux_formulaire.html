@@ -3,22 +3,20 @@
 
   <form>
     <div>
-      <span>Nom :</span> <!-- ❌ Pas de label, juste du texte -->
+      <span>Nom :</span> <!-- ❌ Pas de label -->
       <input type="text" /> <!-- ❌ Pas de id, pas de name -->
     </div>
 
     <div>
       <span>Email :</span>
-      <input type="text" /> <!-- ❌ Mauvais type -->
+      <input type="text" /> <!-- ❌ Type non adapté -->
     </div>
 
     <div>
       <span>Message :</span>
-      <div contenteditable="true" class="faux-textarea"></div> <!-- ❌ Faux champ -->
+      <div contenteditable="true" class="faux-textarea"></div> <!-- ❌ Faux champ non vocalisé -->
     </div>
 
-    <div class="submit-btn">Envoyer</div> <!-- ❌ Faux bouton -->
+    <button type="submit">Envoyer</button> <!-- ✅ Bouton conforme -->
   </form>
-</section>
-
 </section>
