@@ -55,12 +55,14 @@
     <p>Essayez de cliquer sur ce petit bouton avec votre souris qui tremble (via Funkify) :</p>
     <button onclick="alert('Bravo, vous avez réussi à cliquer !')">Cliquer ici</button>
 
-    <nav>
-  <button>Menu pas au clavier</button>
-  <div class="dropdown">
-    <p>Accueil</p>
-    <p>Services</p>
-    <p>Contact</p>
+ <nav>
+  <div class="menu-container">
+    <button>Menu</button>
+    <div class="dropdown">
+      <p>Accueil</p>
+      <p>Services</p>
+      <p>Contact</p>
+    </div>
   </div>
 </nav>
 
@@ -69,10 +71,11 @@
   display: none;
 }
 
-button:hover + .dropdown {
+.menu-container:hover .dropdown {
   display: block;
 }
 </style>
+
 
     <nav>
       <a href="index.html">Retour accueil</a>
