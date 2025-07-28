@@ -251,10 +251,11 @@ const submenuBox = document.getElementById('submenu');
 
 // gestion du clic
 toggleBtn.addEventListener('click', () => {
-  const isOpen = submenuBox.getAttribute('aria-hidden') === 'false';
-  submenuBox.setAttribute('aria-hidden', String(!isOpen));
-  toggleBtn.setAttribute('aria-expanded', String(!isOpen));
+  const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+  toggleBtn.setAttribute('aria-expanded', String(!expanded));
+  submenuBox.setAttribute('aria-hidden', String(!expanded));
 });
+
 
 // gestion clavier : Enter ou Espace doivent simuler le clic
 toggleBtn.addEventListener('keydown', e => {
