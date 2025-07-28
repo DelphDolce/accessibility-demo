@@ -1,85 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Démo Tremblement - Non Accessible</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Menu déroulant inaccessible</title>
   <style>
-    body {
-      font-family: 'Playfair Display', serif;
-      margin: 0;
-      padding: 2rem;
-      background: linear-gradient(to right, #ffa69e, #5fa8d3);
-      color: #aaa;
-      text-align: center;
+    #menu {
+      display: none;
+      position: absolute;
+      background: #eee;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      list-style: none;
     }
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 10px;
-    }
-    button {
-      font-size: 0.6rem;
-      padding: 0.2rem 0.4rem;
-      border: none;
-      background: #ff6f61;
-      color: white;
-      cursor: pointer;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-    }
-    button:hover {
-      background: #ff3b3b;
-      transform: scale(1.1);
-    }
-    button:focus {
-      outline: none;
-    }
-    nav {
-      margin-top: 20px;
-    }
-    nav a {
-      color: #0078D4;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
+    #menu li {
+      margin: 0.3em 0;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Démo Tremblement 🤯</h1>
-    <p>Essayez de cliquer sur ce petit bouton avec votre souris qui tremble (via Funkify) :</p>
-    <button onclick="alert('Bravo, vous avez réussi à cliquer !')">Cliquer ici</button>
+  <button onclick="toggleMenu()">Menu</button>
+  <ul id="menu">
+    <li><a href="#">Accueil</a></li>
+    <li><a href="#">À propos</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
 
- <nav>
-  <div class="menu-container">
-    <button>Menu</button>
-    <div class="dropdown">
-      <p>Accueil</p>
-      <p>Services</p>
-      <p>Contact</p>
-    </div>
-  </div>
-</nav>
-
-<style>
-.dropdown {
-  display: none;
-}
-
-.menu-container:hover .dropdown {
-  display: block;
-}
-</style>
-
-
-    <nav>
-      <a href="index.html">Retour accueil</a>
-    </nav>
-  </div>
-  </body>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</body>
 </html>
