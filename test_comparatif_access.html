@@ -69,14 +69,22 @@
       position: absolute;
       top: 100%;
       left: 0;
-      padding: 0.5rem;
       background: white;
+      padding: 0.5rem;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      display: flex;
+      display: none;
       flex-direction: column;
       gap: 0.5rem;
       z-index: 1000;
+    }
+
+    .submenu[aria-hidden="false"] {
+      display: flex;
+    }
+
+    .dropdown:hover .submenu {
+      display: flex;
     }
 
     .submenu li {
@@ -156,7 +164,6 @@
       color: #000;
     }
 
-    /* 🌐 Responsive mobile */
     @media screen and (max-width: 600px) {
       .container {
         padding: 1rem;
@@ -198,10 +205,10 @@
       <a href="index">Accueil</a>
 
       <div class="dropdown">
-        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu">
+        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu" aria-haspopup="true">
           Bon menu ▾
         </button>
-        <ul id="submenu" class="submenu" hidden>
+        <ul id="submenu" class="submenu" aria-hidden="true">
           <li><a href="#comparatif">Comparatif</a></li>
         </ul>
       </div>
@@ -238,14 +245,14 @@
       }
     });
 
-    // Sous-menu accessible au clic et clavier
+    // Sous-menu accessible au clic / clavier
     const toggleBtn = document.querySelector('.submenu-toggle');
     const submenuBox = document.getElementById('submenu');
 
     toggleBtn.addEventListener('click', () => {
-      const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-      toggleBtn.setAttribute('aria-expanded', String(!expanded));
-      submenuBox.hidden = expanded;
+      const isOpen = submenuBox.getAttribute('aria-hidden') === 'false';
+      submenuBox.setAttribute('aria-hidden', String(!isOpen));
+      toggleBtn.setAttribute('aria-expanded', String(!isOpen));
     });
 
     toggleBtn.addEventListener('keydown', (e) => {
