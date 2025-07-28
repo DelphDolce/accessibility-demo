@@ -247,20 +247,23 @@
 
     // Sous-menu accessible au clic / clavier
     const toggleBtn = document.querySelector('.submenu-toggle');
-    const submenuBox = document.getElementById('submenu');
+const submenuBox = document.getElementById('submenu');
 
-    toggleBtn.addEventListener('click', () => {
-      const isOpen = submenuBox.getAttribute('aria-hidden') === 'false';
-      submenuBox.setAttribute('aria-hidden', String(!isOpen));
-      toggleBtn.setAttribute('aria-expanded', String(!isOpen));
-    });
+// gestion du clic
+toggleBtn.addEventListener('click', () => {
+  const isOpen = submenuBox.getAttribute('aria-hidden') === 'false';
+  submenuBox.setAttribute('aria-hidden', String(!isOpen));
+  toggleBtn.setAttribute('aria-expanded', String(!isOpen));
+});
 
-    toggleBtn.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        toggleBtn.click();
-      }
-    });
+// gestion clavier : Enter ou Espace doivent simuler le clic
+toggleBtn.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault(); // éviter la soumission ou le scroll
+    toggleBtn.click();  // simule le clic
+  }
+});
+
   </script>
 </body>
 </html>
