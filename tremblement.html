@@ -6,6 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Démo Tremblement - Non Accessible</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+   <title>Menu déroulant inaccessible</title>
+  <style>
+    #menu {
+      display: none;
+      position: absolute;
+      background: #eee;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      list-style: none;
+    }
+    #menu li {
+      margin: 0.3em 0;
+    }
+  </style>
   <style>
     body {
       font-family: 'Playfair Display', serif;
@@ -82,5 +96,18 @@
       <a href="index.html">Retour accueil</a>
     </nav>
   </div>
+    <button onclick="toggleMenu()">Menu</button>
+  <ul id="menu">
+    <li><a href="#">Accueil</a></li>
+    <li><a href="#">À propos</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
   </body>
 </html>
