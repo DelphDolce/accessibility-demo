@@ -14,6 +14,7 @@
       color: #333;
       text-align: center;
     }
+
     .container {
       max-width: 800px;
       margin: 0 auto;
@@ -28,6 +29,7 @@
       justify-content: center;
       gap: 2rem;
       margin: 2rem 0;
+      flex-wrap: wrap;
     }
 
     .menu a {
@@ -50,10 +52,16 @@
     .menu a:focus-visible {
       background: #ff3b3b;
       transform: scale(1.1);
-      /* ✅ focus visible renforcé */
       outline: none;
       box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.6);
       border-radius: 12px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 1rem;
+      border-radius: 8px;
     }
 
     .content {
@@ -80,7 +88,7 @@
     }
 
     .random-text:focus {
-      outline: 5px solid #ffae00; /* Focus bien visible */
+      outline: 5px solid #ffae00;
     }
 
     nav {
@@ -106,10 +114,36 @@
       color: #000;
     }
 
-    @media (hover: underline) and (pointer: coarse) {
-      .lien-nav {
-        min-width: 44px;
-        min-height: 44px;
+    @media screen and (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+
+      .menu {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu a {
+        width: 100%;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .random-text {
+        font-size: 1.2rem;
+      }
+
+      img {
+        max-height: 250px;
+        object-fit: contain;
       }
     }
   </style>
