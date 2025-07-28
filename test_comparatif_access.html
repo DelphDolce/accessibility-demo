@@ -33,16 +33,13 @@
     }
 
     .menu a {
-      font-size: 1rem; /* avant : 1.2rem */
-  padding: 0.5rem 1rem; /* avant : 0.7rem 1.5rem */
-      background: #ff6f61;
-      color: white;
-      border: none;
-      border-radius: 50px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      display: inline-block;
-    }
+  font-size: 0.9rem; /* plus discret mais lisible */
+  padding: 0.4rem 0.8rem; /* réduit l'espace interne */
+  border-radius: 30px; /* conserve l’effet “pill” mais plus fin */
+  min-width: auto; /* empêche la taille forcée */
+  white-space: nowrap; /* évite les retours à la ligne */
+}
+
 
     .menu a:hover {
       background: #ff3b3b;
@@ -155,6 +152,28 @@
         object-fit: contain;
       }
     }
+    /* ... tes styles globaux ici ... */
+
+@media screen and (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .menu a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    width: auto;
+    text-align: center;
+    min-width: auto;
+  }
+
+  img {
+    max-height: 250px;
+    object-fit: contain;
+  }
+}
+
   </style>
 </head>
 <body>
