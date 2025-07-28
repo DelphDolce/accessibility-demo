@@ -145,6 +145,63 @@
         font-size: 1.2rem;
       }
     }
+
+    .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(95, 168, 211, 0.95);
+  border-radius: 10px;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 150px;
+  z-index: 10;
+}
+
+.submenu a {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.6rem;
+  background: white;
+  color: #0078D4;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.submenu a:hover,
+.submenu a:focus-visible {
+  background: #0078D4;
+  color: white;
+  transform: scale(1.05);
+}
+
+.submenu-toggle {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  background: #ffa69e;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submenu-toggle:hover,
+.submenu-toggle:focus-visible {
+  background: #ff8674;
+  transform: scale(1.05);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
   </style>
 </head>
 <body>
@@ -152,10 +209,16 @@
     <h1>Bienvenue dans la démo <strong>FUN ET ACCESSIBLE</strong> 🎉</h1>
 
     <nav class="menu" aria-label="Menu principal">
-      <a href="index">Accueil</a>
-      <a href="#apropos">À propos</a>
-      <a href="menu_ok">Bon menu</a>
-    </nav>
+  <a href="index">Accueil</a>
+
+  <div class="dropdown">
+    <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu">Bon menu ▾</button>
+    <div id="submenu" class="submenu" hidden>
+      <a href="#comparatif">Comparatif</a>
+    </div>
+  </div>
+</nav>
+
 
     <p id="message" class="content"></p>
 
@@ -187,6 +250,16 @@
         changeColor();
       }
     });
+
+    const toggleBtn = document.querySelector('.submenu-toggle');
+const submenuBox = document.getElementById('submenu');
+
+toggleBtn.addEventListener('click', () => {
+  const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+  toggleBtn.setAttribute('aria-expanded', !expanded);
+  submenuBox.hidden = expanded;
+});
+
   </script>
 </body>
 </html>
